@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startSlider();
   }
 
-  // ---- Hero Parallax ----
+  // ---- Hero Parallax (legacy .hero) ----
   const heroSection = document.querySelector('.hero');
   if (heroSection) {
     window.addEventListener('scroll', () => {
@@ -251,6 +251,100 @@ document.addEventListener('DOMContentLoaded', () => {
       const heroBg = heroSection.querySelector('.hero-bg');
       if (heroBg) heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
     });
+  }
+
+  // ---- Hero Slider ----
+  const sliderEl = document.getElementById('hero-slider');
+  if (sliderEl) {
+    const slides      = sliderEl.querySelectorAll('.hs-slide');
+    const dots        = sliderEl.querySelectorAll('.hs-dot');
+    const prevBtn     = document.getElementById('hs-prev');
+    const nextBtn     = document.getElementById('hs-next');
+    const progressFill = document.getElementById('hs-progress-fill');
+    const DURATION    = 5500; // ms per slide
+    let current       = 0;
+    let timer         = null;
+    let progressTimer = null;
+    let progressStart = null;
+
+    function goSlide(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      resetProgress();
+    }
+
+    function resetProgress() {
+      if (progressFill) {
+        progressFill.style.transition = 'none';
+        progressFill.style.width = '0%';
+        clearInterval(progressTimer);
+        progressStart = Date.now();
+        progressTimer = setInterval(() => {
+          const elapsed = Date.now() - progressStart;
+          const pct = Math.min((elapsed / DURATION) * 100, 100);
+          progressFill.style.transition = 'none';
+          progressFill.style.width = pct + '%';
+          if (pct >= 100) clearInterval(progressTimer);
+        }, 50);
+      }
+    }
+
+    function startAuto() {
+      clearInterval(timer);
+      timer = setInterval(() => goSlide(current + 1), DURATION);
+      resetProgress();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { clearInterval(timer); goSlide(current - 1); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { clearInterval(timer); goSlide(current + 1); startAuto(); });
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        goSlide(parseInt(dot.getAttribute('data-slide')));
+        startAuto();
+      });
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    sliderEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    sliderEl.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        clearInterval(timer);
+        goSlide(diff > 0 ? current + 1 : current - 1);
+        startAuto();
+      }
+    });
+
+    // Pause on hover
+    sliderEl.addEventListener('mouseenter', () => clearInterval(timer));
+    sliderEl.addEventListener('mouseleave', startAuto);
+
+    startAuto();
+
+    // ---- Animated Particles ----
+    const particleContainer = document.getElementById('hero-particles');
+    if (particleContainer) {
+      const colors = ['rgba(245,166,35,0.7)', 'rgba(255,255,255,0.5)', 'rgba(200,16,46,0.5)', 'rgba(61,139,61,0.5)'];
+      for (let i = 0; i < 28; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 6 + 3;
+        p.style.cssText = `
+          width:${size}px; height:${size}px;
+          left:${Math.random() * 100}%;
+          bottom:${Math.random() * -20}%;
+          background:${colors[Math.floor(Math.random() * colors.length)]};
+          animation-duration:${Math.random() * 12 + 8}s;
+          animation-delay:${Math.random() * 8}s;
+        `;
+        particleContainer.appendChild(p);
+      }
+    }
   }
 
 });
