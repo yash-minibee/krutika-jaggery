@@ -1,0 +1,147 @@
+/* ============================================
+   CLIENTS PAGE STYLES
+   ============================================ */
+
+/* Trust Stats */
+.trust-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.trust-stat {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(200,16,46,0.08);
+  transition: var(--transition);
+}
+.trust-stat:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(200,16,46,0.1); }
+.trust-stat .counter-num { display: inline; }
+.trust-stat > span {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gold-dark);
+}
+.trust-stat p {
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Client Categories */
+.client-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.client-cat-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(200,16,46,0.08);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.client-cat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+.client-cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(200,16,46,0.1); }
+.client-cat-card:hover::before { transform: scaleX(1); }
+.cat-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.client-cat-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+.client-cat-card p { color: var(--gray); font-size: 0.88rem; line-height: 1.6; }
+
+/* Client Logos Grid */
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+.client-logo-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border: 1px solid rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.client-logo-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: grayscale(40%);
+}
+.client-logo-card:hover img { transform: scale(1.08); filter: grayscale(0%); }
+.client-logo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(200,16,46,0.8), rgba(245,166,35,0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+.client-logo-card:hover .client-logo-overlay { opacity: 1; }
+.client-logo-overlay span {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Trust Badges */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.trust-badge-card {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.trust-badge-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.2); }
+.badge-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.trust-badge-card h4 { color: var(--white); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+.trust-badge-card p { color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.6; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .client-logos-grid { grid-template-columns: repeat(3, 1fr); }
+  .badges-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .trust-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .client-categories { grid-template-columns: repeat(2, 1fr); }
+  .client-logos-grid { grid-template-columns: repeat(2, 1fr); }
+  .badges-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .client-categories { grid-template-columns: 1fr; }
+  .trust-stats-grid { grid-template-columns: 1fr 1fr; }
+}

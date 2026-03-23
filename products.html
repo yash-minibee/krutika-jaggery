@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – Krutika Natural Jaggery</title>
+  <link rel="icon" href="/images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+<body>
+<div id="scroll-progress"></div>
+<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-2.png" alt="Krutika Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="clients.html">Clients</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero products-hero">
+  <div class="page-hero-content">
+    <div class="section-tag white" style="margin:0 auto 1rem;">Our Range</div>
+    <h1>Our <span>Products</span></h1>
+    <p>Premium natural jaggery in every form — crafted for purity, packed with goodness.</p>
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Products</span></nav>
+  </div>
+</section>
+
+<!-- FILTER + PRODUCTS -->
+<section class="section-pad">
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="block">Jaggery Blocks</button>
+      <button class="filter-btn" data-filter="powder">Powder &amp; Granules</button>
+      <button class="filter-btn" data-filter="liquid">Liquid Jaggery</button>
+      <button class="filter-btn" data-filter="flavoured">Flavoured</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-catalog">
+
+      <div class="product-card card reveal delay-1" data-category="block">
+        <div class="product-img">
+          <img src="referance/images/1.jpg" alt="Natural Jaggery Block 500g" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p1')">Quick View</button>
+          </div>
+          <div class="product-badge bestseller">Bestseller</div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Jaggery Block</div>
+          <h3>Natural Jaggery Block</h3>
+          <p>Traditional solid jaggery block — perfect for cooking, tea &amp; traditional sweets.</p>
+          <div class="product-sizes">
+            <span>500g</span><span>1kg</span><span>5kg</span><span>25kg</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">100% Pure</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p1')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-2" data-category="block">
+        <div class="product-img">
+          <img src="referance/images/1_1.jpg" alt="Organic Jaggery Block" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p2')">Quick View</button>
+          </div>
+          <div class="product-badge organic">Organic</div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Jaggery Block</div>
+          <h3>Organic Jaggery Block</h3>
+          <p>Certified organic jaggery block from pesticide-free sugarcane farms.</p>
+          <div class="product-sizes">
+            <span>500g</span><span>1kg</span><span>5kg</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Certified Organic</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p2')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-3" data-category="powder">
+        <div class="product-img">
+          <img src="referance/images/2.jpg" alt="Jaggery Powder" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p3')">Quick View</button>
+          </div>
+          <div class="product-badge new">New</div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Powder</div>
+          <h3>Fine Jaggery Powder</h3>
+          <p>Finely ground jaggery powder — ideal for baking, beverages &amp; desserts.</p>
+          <div class="product-sizes">
+            <span>250g</span><span>500g</span><span>1kg</span><span>5kg</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Premium Grade</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p3')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-4" data-category="powder">
+        <div class="product-img">
+          <img src="referance/images/2_1.jpg" alt="Jaggery Granules" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p4')">Quick View</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Granules</div>
+          <h3>Jaggery Granules</h3>
+          <p>Coarse granules for a rustic texture — great for health drinks &amp; cooking.</p>
+          <div class="product-sizes">
+            <span>500g</span><span>1kg</span><span>5kg</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Natural</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p4')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-1" data-category="block">
+        <div class="product-img">
+          <img src="referance/images/3.jpg" alt="Jaggery Cubes" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p5')">Quick View</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Cubes</div>
+          <h3>Jaggery Cubes</h3>
+          <p>Convenient bite-sized cubes — perfect for tea, coffee &amp; on-the-go snacking.</p>
+          <div class="product-sizes">
+            <span>200g</span><span>500g</span><span>1kg</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Convenient</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p5')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-2" data-category="liquid">
+        <div class="product-img">
+          <img src="referance/images/4.jpg" alt="Liquid Jaggery" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p6')">Quick View</button>
+          </div>
+          <div class="product-badge bestseller">Popular</div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Liquid</div>
+          <h3>Liquid Jaggery (Kakvi)</h3>
+          <p>Smooth, pourable liquid jaggery — perfect for drizzling, marinades &amp; sauces.</p>
+          <div class="product-sizes">
+            <span>500ml</span><span>1L</span><span>5L</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Artisan</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p6')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-3" data-category="flavoured">
+        <div class="product-img">
+          <img src="referance/images/5.jpg" alt="Ginger Jaggery" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p7')">Quick View</button>
+          </div>
+          <div class="product-badge new">New</div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Flavoured</div>
+          <h3>Ginger Jaggery</h3>
+          <p>Jaggery infused with real ginger — a warming, immunity-boosting treat.</p>
+          <div class="product-sizes">
+            <span>200g</span><span>500g</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Infused</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p7')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card card reveal delay-4" data-category="flavoured">
+        <div class="product-img">
+          <img src="referance/images/6.jpg" alt="Cardamom Jaggery" />
+          <div class="product-overlay">
+            <button class="btn btn-gold" onclick="openProductModal('p8')">Quick View</button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Flavoured</div>
+          <h3>Cardamom Jaggery</h3>
+          <p>Aromatic cardamom-infused jaggery — a festive favorite for sweets &amp; chai.</p>
+          <div class="product-sizes">
+            <span>200g</span><span>500g</span>
+          </div>
+          <div class="product-footer">
+            <span class="product-purity">Aromatic</span>
+            <button class="btn btn-primary btn-sm" onclick="openProductModal('p8')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT MODAL OVERLAY -->
+<div id="modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:2000;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s ease;backdrop-filter:blur(4px);">
+  <button id="modal-close" style="position:fixed;top:1.25rem;right:1.25rem;background:#C8102E;border:none;color:#fff;font-size:1.25rem;font-weight:700;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2100;box-shadow:0 4px 16px rgba(0,0,0,0.3);line-height:1;transition:background 0.2s;" onmouseover="this.style.background='#9B0B22'" onmouseout="this.style.background='#C8102E'">✕</button>
+
+  <!-- Modal p1 -->
+  <div id="p1" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/1.jpg" alt="Natural Jaggery Block" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Jaggery Block</div>
+      <h2>Natural Jaggery Block</h2>
+      <div class="divider"></div>
+      <p>Our flagship product — traditional solid jaggery made from the finest sugarcane juice. No chemicals, no additives. Just pure, natural sweetness the way it's been made for centuries.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> 100% Chemical Free</div>
+        <div class="modal-feature"><span>✓</span> Rich in Iron &amp; Minerals</div>
+        <div class="modal-feature"><span>✓</span> FSSAI Certified</div>
+        <div class="modal-feature"><span>✓</span> Available in Bulk</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 500g | 1kg | 5kg | 25kg</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+
+  <!-- Modal p2 -->
+  <div id="p2" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/1_1.jpg" alt="Organic Jaggery Block" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Organic</div>
+      <h2>Organic Jaggery Block</h2>
+      <div class="divider"></div>
+      <p>Certified organic jaggery from pesticide-free farms. Every block is tested and verified for organic compliance — the purest choice for health-conscious families.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Certified Organic</div>
+        <div class="modal-feature"><span>✓</span> Pesticide Free</div>
+        <div class="modal-feature"><span>✓</span> Third-Party Tested</div>
+        <div class="modal-feature"><span>✓</span> Premium Quality</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 500g | 1kg | 5kg</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+
+  <!-- Modals p3-p8 (simplified) -->
+  <div id="p3" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/2.jpg" alt="Fine Jaggery Powder" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Powder</div>
+      <h2>Fine Jaggery Powder</h2>
+      <div class="divider"></div>
+      <p>Finely milled jaggery powder that dissolves instantly. Perfect for baking, health drinks, smoothies, and any recipe that calls for a natural sweetener.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Instant Dissolving</div>
+        <div class="modal-feature"><span>✓</span> Baking Grade</div>
+        <div class="modal-feature"><span>✓</span> No Clumping</div>
+        <div class="modal-feature"><span>✓</span> Resealable Pack</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 250g | 500g | 1kg | 5kg</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+  <div id="p4" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/2_1.jpg" alt="Jaggery Granules" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Granules</div>
+      <h2>Jaggery Granules</h2>
+      <div class="divider"></div>
+      <p>Coarse-ground jaggery granules with a rustic texture. Great for health drinks, porridge, and traditional recipes that benefit from a slightly chunky sweetener.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Coarse Texture</div>
+        <div class="modal-feature"><span>✓</span> Natural Flavor</div>
+        <div class="modal-feature"><span>✓</span> Health Drink Ready</div>
+        <div class="modal-feature"><span>✓</span> Bulk Available</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 500g | 1kg | 5kg</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+  <div id="p5" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/3.jpg" alt="Jaggery Cubes" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Cubes</div>
+      <h2>Jaggery Cubes</h2>
+      <div class="divider"></div>
+      <p>Pre-portioned jaggery cubes for everyday convenience. Drop one in your tea or coffee, or enjoy as a natural after-meal sweet. Perfect for offices and households.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Pre-Portioned</div>
+        <div class="modal-feature"><span>✓</span> Tea &amp; Coffee Ready</div>
+        <div class="modal-feature"><span>✓</span> Hygienic Packaging</div>
+        <div class="modal-feature"><span>✓</span> Gift Ready</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 200g | 500g | 1kg</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+  <div id="p6" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/4.jpg" alt="Liquid Jaggery" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Liquid</div>
+      <h2>Liquid Jaggery (Kakvi)</h2>
+      <div class="divider"></div>
+      <p>Traditional Kakvi — the liquid form of jaggery with an intense, rich flavor. Perfect for drizzling over rotis, using in marinades, or as a natural sweetener in beverages.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Rich Flavor</div>
+        <div class="modal-feature"><span>✓</span> Pourable Consistency</div>
+        <div class="modal-feature"><span>✓</span> No Preservatives</div>
+        <div class="modal-feature"><span>✓</span> Bulk Available</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 500ml | 1L | 5L</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+  <div id="p7" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/5.jpg" alt="Ginger Jaggery" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Flavoured</div>
+      <h2>Ginger Jaggery</h2>
+      <div class="divider"></div>
+      <p>A warming blend of pure jaggery and real ginger extract. Excellent for immunity, digestion, and as a natural remedy for cold &amp; cough. A household staple in winter.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Real Ginger Extract</div>
+        <div class="modal-feature"><span>✓</span> Immunity Boosting</div>
+        <div class="modal-feature"><span>✓</span> Digestive Aid</div>
+        <div class="modal-feature"><span>✓</span> Winter Favorite</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 200g | 500g</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+  <div id="p8" class="modal-content product-modal" style="display:none;opacity:0;transition:opacity 0.3s ease;">
+    <div class="modal-img"><img src="referance/images/6.jpg" alt="Cardamom Jaggery" /></div>
+    <div class="modal-info">
+      <div class="section-tag">Flavoured</div>
+      <h2>Cardamom Jaggery</h2>
+      <div class="divider"></div>
+      <p>Fragrant cardamom-infused jaggery — a festive favorite. Elevates traditional sweets, chai, and desserts with its aromatic warmth. A premium gifting option too.</p>
+      <div class="modal-features">
+        <div class="modal-feature"><span>✓</span> Real Cardamom</div>
+        <div class="modal-feature"><span>✓</span> Festive Gifting</div>
+        <div class="modal-feature"><span>✓</span> Aromatic Flavor</div>
+        <div class="modal-feature"><span>✓</span> Premium Packaging</div>
+      </div>
+      <div class="modal-sizes"><strong>Available Sizes:</strong> 200g | 500g</div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Enquire Now →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo-2.png" alt="Krutika Logo" />
+      <p>Krutika Natural Jaggery Products brings you the finest quality jaggery, crafted with tradition and delivered with care.</p>
+      <div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">tw</a><a href="#">yt</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">→ Home</a></li>
+        <li><a href="about.html">→ About Us</a></li>
+        <li><a href="products.html">→ Products</a></li>
+        <li><a href="clients.html">→ Clients</a></li>
+        <li><a href="contact.html">→ Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html">→ Jaggery Blocks</a></li>
+        <li><a href="products.html">→ Jaggery Powder</a></li>
+        <li><a href="products.html">→ Jaggery Cubes</a></li>
+        <li><a href="products.html">→ Liquid Jaggery</a></li>
+        <li><a href="products.html">→ Flavoured Jaggery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item"><div class="icon">📍</div><p>123, Industrial Area, Kolhapur, Maharashtra – 416001</p></div>
+      <div class="footer-contact-item"><div class="icon">📞</div><p>+91 99999 99999</p></div>
+      <div class="footer-contact-item"><div class="icon">✉️</div><p>info@krutikafoods.com</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <span>Krutika Natural Jaggery Products</span>. All rights reserved.</p>
+    <p>Made with ❤️ in India</p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
