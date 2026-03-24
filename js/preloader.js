@@ -2,7 +2,7 @@
    PRELOADER — synchronized with video (4s)
    ============================================ */
 (function () {
-  const DURATION = 4500; // ms — must match video length
+  const DURATION = 3500; // ms — must match video length
 
   const overlay  = document.getElementById('preloader');
   const video    = document.getElementById('preloader-video');
