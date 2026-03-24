@@ -73,12 +73,12 @@
       });
     });
 
-    // Fallback: if video never loads, start anyway after 800ms
+    // Fallback: if video never loads, start anyway after 1000ms
     setTimeout(function () {
       if (!video.classList.contains('loaded')) {
         video.classList.add('loaded');
       }
-    }, 900);
+    }, 1000);
 
     video.load();
   }
