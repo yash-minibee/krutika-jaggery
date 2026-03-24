@@ -51,6 +51,28 @@
         setTimeout(hidePreloader, DURATION);
     }
 
+    // if (video) {
+    //     let started = false;
+
+    //     function startWhenReady() {
+    //         if (started) return;
+    //         started = true;
+
+    //         video.classList.add("loaded");
+    //         video.play().catch(() => {});
+    //         start();
+    //     }
+
+    //     video.addEventListener("canplaythrough", startWhenReady);
+
+    //     // fallback
+    //     setTimeout(startWhenReady, 1200);
+
+    //     video.load();
+    // } else {
+    //     start();
+    // }
+
     if (video) {
         let started = false;
 
@@ -63,14 +85,16 @@
             start();
         }
 
+        // Try multiple events (more reliable)
+        video.addEventListener("loadeddata", startWhenReady);
+        video.addEventListener("canplay", startWhenReady);
         video.addEventListener("canplaythrough", startWhenReady);
 
-        // fallback
-        setTimeout(startWhenReady, 1200);
+        // Strong fallback
+        setTimeout(startWhenReady, 2000);
 
         video.load();
     } else {
         start();
     }
-
 })();
