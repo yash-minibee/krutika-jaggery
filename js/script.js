@@ -59,7 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.12 });
-  revealEls.forEach(el => revealObserver.observe(el));
+
+  function startReveal() {
+    revealEls.forEach(el => revealObserver.observe(el));
+  }
+
+  // If preloader is present, wait for it; otherwise start immediately
+  if (document.getElementById('preloader')) {
+    document.addEventListener('preloaderDone', startReveal, { once: true });
+  } else {
+    startReveal();
+  }
 
   // ---- Animated Counters ----
   function animateCounter(el) {
@@ -324,7 +334,12 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderEl.addEventListener('mouseenter', () => clearInterval(timer));
     sliderEl.addEventListener('mouseleave', startAuto);
 
-    startAuto();
+    // Start slider only after preloader is gone (or immediately if no preloader)
+    if (document.getElementById('preloader')) {
+      document.addEventListener('preloaderDone', startAuto, { once: true });
+    } else {
+      startAuto();
+    }
 
     // ---- Animated Particles ----
     const particleContainer = document.getElementById('hero-particles');

@@ -1,0 +1,157 @@
+/* ============================================
+   PRELOADER
+   ============================================ */
+
+/* Lock scroll while loading */
+body.loading {
+  overflow: hidden;
+}
+
+/* Disable all reveal / entrance animations until preloader ends */
+body.loading .reveal,
+body.loading .reveal-left,
+body.loading .reveal-right,
+body.loading .animate-fadeup,
+body.loading .animate-left,
+body.loading .animate-right,
+body.loading .animate-scale,
+body.loading .hs-slide.active .hs-text h1,
+body.loading .hs-slide.active .hs-text p,
+body.loading .hs-slide.active .hero-btns,
+body.loading .hs-slide.active .hero-badges,
+body.loading .hs-slide.active .hs-img-col {
+  opacity: 0 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ---- Overlay ---- */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #0d1f0d;          /* deep green fallback */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ---- Video ---- */
+#preloader-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+#preloader-video.loaded {
+  opacity: 1;
+}
+
+/* Dark vignette over video */
+#preloader::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.55) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---- Content (above video) ---- */
+.preloader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo */
+.preloader-logo {
+  height: 72px;
+  width: auto;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+  animation: plLogoIn 0.7s ease forwards;
+}
+@keyframes plLogoIn {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading text */
+.preloader-text {
+  color: rgba(255,255,255,0.88);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: plTextIn 0.7s 0.3s ease both;
+}
+@keyframes plTextIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated dots */
+.preloader-text::after {
+  content: '';
+  animation: plDots 1.5s steps(4, end) infinite;
+}
+@keyframes plDots {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+/* ---- Progress bar ---- */
+.preloader-progress-wrap {
+  width: min(320px, 70vw);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.preloader-bar-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.preloader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #F5A623, #C8102E);
+  border-radius: 3px;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(245,166,35,0.6);
+}
+
+.preloader-pct {
+  color: rgba(255,255,255,0.5);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-align: right;
+}
