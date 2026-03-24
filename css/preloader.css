@@ -46,6 +46,7 @@ body.loading .hs-slide.active .hs-img-col {
 
 /* ---- Video ---- */
 #preloader-video {
+  background: #0d1f0d; /* fallback color */
   position: absolute;
   inset: 0;
   width: 100%;
