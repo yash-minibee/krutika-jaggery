@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    PRODUCTS PAGE STYLES
    ============================================ */
 
@@ -6,7 +6,7 @@
   background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, var(--green-light) 100%);
 }
 .products-hero::before {
-  background: url('/images/products_hero.png') center/cover no-repeat;
+  background: url('../images/products_hero.png') center/cover no-repeat;
 }
 
 /* Filter Bar */
