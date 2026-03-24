@@ -253,6 +253,63 @@ document.addEventListener('DOMContentLoaded', () => {
     startSlider();
   }
 
+  // ---- About Page: Image Tilt Parallax ----
+  const imgStack = document.querySelector('.about-img-stack');
+  if (imgStack) {
+    const img = imgStack.querySelector('.about-img-main');
+    imgStack.addEventListener('mousemove', e => {
+      const { left, top, width, height } = imgStack.getBoundingClientRect();
+      const x = ((e.clientX - left) / width  - 0.5) * 14;
+      const y = ((e.clientY - top)  / height - 0.5) * 10;
+      if (img) img.style.transform = `scale(1.025) rotateY(${x}deg) rotateX(${-y}deg) translateY(-4px)`;
+    });
+    imgStack.addEventListener('mouseleave', () => {
+      if (img) img.style.transform = '';
+    });
+  }
+
+  // ---- About Page: Highlight item count-up on hover ----
+  document.querySelectorAll('.about-highlight-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transition = 'background 0.3s ease, transform 0.3s ease';
+    });
+  });
+
+  // ---- Page Hero Particles ----
+  document.querySelectorAll('.ph-particles').forEach(container => {
+    const colors = ['rgba(255,255,255,0.25)', 'rgba(245,166,35,0.35)', 'rgba(255,255,255,0.15)'];
+    for (let i = 0; i < 22; i++) {
+      const p = document.createElement('div');
+      p.className = 'ph-particle';
+      const size = Math.random() * 8 + 4;
+      p.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${Math.random() * 100}%;
+        bottom:${Math.random() * -10}%;
+        background:${colors[Math.floor(Math.random() * colors.length)]};
+        animation-duration:${Math.random() * 10 + 7}s;
+        animation-delay:${Math.random() * 6}s;
+      `;
+      container.appendChild(p);
+    }
+  });
+
+  // ---- Page Hero Mouse Parallax ----
+  const pageHero = document.querySelector('.page-hero');
+  if (pageHero) {
+    pageHero.addEventListener('mousemove', e => {
+      const { left, top, width, height } = pageHero.getBoundingClientRect();
+      const x = ((e.clientX - left) / width  - 0.5) * 18;
+      const y = ((e.clientY - top)  / height - 0.5) * 10;
+      const content = pageHero.querySelector('.page-hero-content');
+      if (content) content.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    pageHero.addEventListener('mouseleave', () => {
+      const content = pageHero.querySelector('.page-hero-content');
+      if (content) content.style.transform = 'translate(0,0)';
+    });
+  }
+
   // ---- Hero Parallax (legacy .hero) ----
   const heroSection = document.querySelector('.hero');
   if (heroSection) {
