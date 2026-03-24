@@ -2,7 +2,7 @@
    PRELOADER — synchronized with video (4s)
    ============================================ */
 (function () {
-  const DURATION = 3500; // ms — must match video length
+  const DURATION = 4000; // ms — must match video length
 
   const overlay  = document.getElementById('preloader');
   const video    = document.getElementById('preloader-video');
@@ -78,7 +78,7 @@
       if (!video.classList.contains('loaded')) {
         video.classList.add('loaded');
       }
-    }, 800);
+    }, 900);
 
     video.load();
   }
