@@ -12,7 +12,6 @@
 
 //     let startTime = null;
 //     let rafId = null;
-//     let started = false;
 
 //     function tick(ts) {
 //         if (!startTime) startTime = ts;
@@ -35,7 +34,7 @@
 
 //         if (video) video.style.opacity = "0";
 
-//         setTimeout(() => {
+//         setTimeout(function () {
 //             overlay.classList.add("hide");
 
 //             overlay.addEventListener("transitionend", function onEnd() {
@@ -48,41 +47,61 @@
 //     }
 
 //     function start() {
-//         if (started) return;
-//         started = true;
-
 //         requestAnimationFrame(tick);
 //         setTimeout(hidePreloader, DURATION);
 //     }
 
+//     // if (video) {
+//     //     let started = false;
+
+//     //     function startWhenReady() {
+//     //         if (started) return;
+//     //         started = true;
+
+//     //         video.classList.add("loaded");
+//     //         video.play().catch(() => {});
+//     //         start();
+//     //     }
+
+//     //     video.addEventListener("canplaythrough", startWhenReady);
+
+//     //     // fallback
+//     //     setTimeout(startWhenReady, 1200);
+
+//     //     video.load();
+//     // } else {
+//     //     start();
+//     // }
+
 //     if (video) {
-//         video.classList.add("loaded");
+//         let started = false;
 
-//         // 🔥 MOST IMPORTANT FIX
-//         video.addEventListener("playing", () => {
+//         function startWhenReady() {
+//             if (started) return;
+//             started = true;
+
+//             video.classList.add("loaded");
+//             video.play().catch(() => {});
 //             start();
-//         });
+//         }
 
-//         // Start video
-//         video.play().catch(() => {
-//             // fallback if autoplay blocked
-//             start();
-//         });
+//         // Try multiple events (more reliable)
+//         video.addEventListener("loadeddata", startWhenReady);
+//         video.addEventListener("canplay", startWhenReady);
+//         video.addEventListener("canplaythrough", startWhenReady);
 
+//         // Strong fallback
+//         setTimeout(startWhenReady, 2000);
+
+//         video.load();
 //     } else {
 //         start();
 //     }
-
 // })();
 
 
 
-
-
-
 (function () {
-    const DURATION = 4000;
-
     const overlay = document.getElementById("preloader");
     const video = document.getElementById("preloader-video");
     const fill = document.getElementById("preloader-bar-fill");
@@ -92,31 +111,30 @@
 
     document.body.classList.add("loading");
 
-    let startTime = null;
-    let rafId = null;
+    let progress = 0;
+    let rafId;
 
-    function tick(ts) {
-        if (!startTime) startTime = ts;
-        const elapsed = Math.min(ts - startTime, DURATION);
-        const progress = (elapsed / DURATION) * 100;
+    function animateProgress() {
+        progress += (100 - progress) * 0.08; // smooth easing
 
-        fill.style.width = progress + "%";
+        if (fill) fill.style.width = progress + "%";
         if (pct) pct.textContent = Math.floor(progress) + "%";
 
-        if (elapsed < DURATION) {
-            rafId = requestAnimationFrame(tick);
+        if (progress < 99) {
+            rafId = requestAnimationFrame(animateProgress);
         }
     }
 
-    function hidePreloader() {
+    function finishLoading() {
         cancelAnimationFrame(rafId);
 
-        fill.style.width = "100%";
+        progress = 100;
+        if (fill) fill.style.width = "100%";
         if (pct) pct.textContent = "100%";
 
         if (video) video.style.opacity = "0";
 
-        setTimeout(function () {
+        setTimeout(() => {
             overlay.classList.add("hide");
 
             overlay.addEventListener("transitionend", function onEnd() {
@@ -125,58 +143,36 @@
                 document.body.classList.remove("loading");
                 document.dispatchEvent(new CustomEvent("preloaderDone"));
             });
-        }, 80);
+        }, 300);
     }
 
-    function start() {
-        requestAnimationFrame(tick);
-        setTimeout(hidePreloader, DURATION);
+    function startPreloader() {
+        animateProgress();
+
+        // Minimum visible time (UX smoothness)
+        setTimeout(finishLoading, 1200);
     }
-
-    // if (video) {
-    //     let started = false;
-
-    //     function startWhenReady() {
-    //         if (started) return;
-    //         started = true;
-
-    //         video.classList.add("loaded");
-    //         video.play().catch(() => {});
-    //         start();
-    //     }
-
-    //     video.addEventListener("canplaythrough", startWhenReady);
-
-    //     // fallback
-    //     setTimeout(startWhenReady, 1200);
-
-    //     video.load();
-    // } else {
-    //     start();
-    // }
 
     if (video) {
         let started = false;
 
-        function startWhenReady() {
+        function handleReady() {
             if (started) return;
             started = true;
 
             video.classList.add("loaded");
+
             video.play().catch(() => {});
-            start();
+            startPreloader();
         }
 
-        // Try multiple events (more reliable)
-        video.addEventListener("loadeddata", startWhenReady);
-        video.addEventListener("canplay", startWhenReady);
-        video.addEventListener("canplaythrough", startWhenReady);
+        // BEST event (use only ONE)
+        video.addEventListener("canplaythrough", handleReady, { once: true });
 
-        // Strong fallback
-        setTimeout(startWhenReady, 2000);
+        // Fallback if video fails
+        setTimeout(handleReady, 2500);
 
-        video.load();
     } else {
-        start();
+        startPreloader();
     }
 })();
