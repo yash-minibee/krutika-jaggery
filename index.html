@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,8 +8,6 @@
   
   <link rel="preconnect" href="https://yash-minibee.github.io">
   
-  <link rel="preload" as="video" href="images/preloader/preloader-final-c.mp4" type="video/mp4" fetchpriority="high">
-  <link rel="preload" as="image" href="images/preloader/preloader-final-img-2.png" fetchpriority="high">
   
   
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
@@ -21,27 +19,53 @@
   <link rel="stylesheet" href="css/preloader.css" />
   <link rel="stylesheet" href="css/home.css" />
 </head>
-<body>
+<body class="loading">
+
 <!-- PRELOADER -->
 <div id="preloader">
-  <video 
-  id="preloader-video"
-  src="images/preloader/preloader-final.mp4"
-  poster="images/preloader/preloader-final-img-2.png"
-  muted
-  playsinline
-  preload="auto"
-  autoplay
-  ></video>
-  <div class="preloader-content">
-    <img src="images/logo-w-bg.png" alt="Krutika" class="preloader-logo" />
-    <p class="preloader-text">Preparing something pure</p>
-    <div class="preloader-progress-wrap">
-      <div class="preloader-bar-track">
-        <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
-      </div>
-      <span class="preloader-pct" id="preloader-pct">0%</span>
+  <div class="pl-inner">
+    <div class="pl-logo">
+      <img src="images/logo-2.png" alt="Krutika Logo" />
     </div>
+    <p class="pl-tagline">Preparing Pure Goodness</p>
+
+    <div class="pl-steps">
+      <div class="pl-step active" id="step-0">
+        <div class="pl-icon-wrap">
+          <img src="images/Preloader/sugercane-c.png" alt="Sugarcane" class="pl-icon" />
+        </div>
+        <span>Sugarcane</span>
+      </div>
+
+      <div class="pl-connector"><div class="pl-connector-fill" id="fill-0"></div></div>
+
+      <div class="pl-step" id="step-1">
+        <div class="pl-icon-wrap">
+          <img src="images/Preloader/crushing-machine-c.png" alt="Crushing" class="pl-icon" />
+        </div>
+        <span>Crushing</span>
+      </div>
+
+      <div class="pl-connector"><div class="pl-connector-fill" id="fill-1"></div></div>
+
+      <div class="pl-step" id="step-2">
+        <div class="pl-icon-wrap">
+          <img src="images/Preloader/boiling-sugarcane-juice-c.png" alt="Boiling" class="pl-icon" />
+        </div>
+        <span>Boiling</span>
+      </div>
+
+      <div class="pl-connector"><div class="pl-connector-fill" id="fill-2"></div></div>
+
+      <div class="pl-step" id="step-3">
+        <div class="pl-icon-wrap">
+          <img src="images/Preloader/jaggery-block-c.png" alt="Jaggery" class="pl-icon" />
+        </div>
+        <span>Jaggery</span>
+      </div>
+    </div>
+
+    <div class="pl-percent" id="pl-percent">0%</div>
   </div>
 </div>
 
