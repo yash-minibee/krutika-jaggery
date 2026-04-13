@@ -17,6 +17,9 @@
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  display: block;          /* makes <a> behave like a block */
+  text-decoration: none;   /* remove underline from <a> */
+  cursor: pointer;
 }
 .contact-info-card::after {
   content: '';

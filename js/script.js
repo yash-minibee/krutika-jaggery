@@ -420,3 +420,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// AD VIDEO MUTE TOGGLE
+(function () {
+  var video   = document.getElementById('ad-video');
+  var btn     = document.getElementById('ad-mute-btn');
+  var iconMuted   = document.getElementById('icon-muted');
+  var iconUnmuted = document.getElementById('icon-unmuted');
+  if (!video || !btn) return;
+
+  btn.addEventListener('click', function () {
+    video.muted = !video.muted;
+    iconMuted.style.display   = video.muted ? 'block' : 'none';
+    iconUnmuted.style.display = video.muted ? 'none'  : 'block';
+    btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+  });
+})();

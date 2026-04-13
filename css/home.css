@@ -2,6 +2,35 @@
    HOME PAGE STYLES
    ============================================ */
 
+
+
+/* ---- CSS Variables ---- */
+:root {
+  --red: #C8102E;
+  --red-dark: #9B0B22;
+  --red-light: #E8294A;
+  --gold: #F5A623;
+  --gold-dark: #D4891A;
+  --gold-light: #FFD166;
+  --green: #2D6A2D;
+  --green-dark: #1A4A1A;
+  --green-light: #3D8B3D;
+  --white: #FFFFFF;
+  --off-white: #FFF9F0;
+  --dark: #1A1A1A;
+  --dark-2: #2D2D2D;
+  --gray: #6B6B6B;
+  --light-gray: #F5F5F5;
+  --shadow: 0 8px 32px rgba(200,16,46,0.15);
+  --shadow-gold: 0 4px 20px rgba(245,166,35,0.4);
+  --shadow-dark: 0 8px 40px rgba(0,0,0,0.2);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+
 /* ============================================
    HERO SLIDER
    ============================================ */
@@ -190,6 +219,23 @@
   width: 100%;
   height: 440px;
   object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+/* Hero slider story caption */
+.hs-story-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1.1rem 1.2rem 1rem;
+  background: linear-gradient(to top, rgba(26,10,10,0.92) 0%, rgba(26,10,10,0.5) 70%, transparent 100%);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  text-align: center;
+}
+  object-fit: cover;
   display: block;
 }
 .hs-img-badge {
@@ -336,40 +382,79 @@
 .benefits { background: var(--off-white); }
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
 .benefit-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.2rem 1.8rem;
   text-align: center;
   border: 1px solid rgba(200,16,46,0.08);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
+
+/* top gradient bar — always visible, animates width */
 .benefit-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
+  top: 0; left: 0;
+  width: 0%;
+  height: 4px;
   background: linear-gradient(90deg, var(--red), var(--gold));
-  transform: scaleX(0);
-  transition: var(--transition);
+  transition: width 0.4s ease;
+  border-radius: 4px 4px 0 0;
 }
-.benefit-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(200,16,46,0.1); }
-.benefit-card:hover::before { transform: scaleX(1); }
-.benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.benefit-card:hover::before { width: 100%; }
+
+/* subtle inner glow on hover */
+.benefit-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 50px rgba(200,16,46,0.12);
+  border-color: rgba(245,166,35,0.3);
+}
+
+/* icon circle */
+.benefit-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(200,16,46,0.08), rgba(245,166,35,0.12));
+  border: 2px solid rgba(245,166,35,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  flex-shrink: 0;
+}
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.12);
+  border-color: rgba(245,166,35,0.6);
+  box-shadow: 0 0 18px rgba(245,166,35,0.3);
+}
+
 .benefit-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--dark);
-  margin-bottom: 0.5rem;
+  margin: 0;
+  line-height: 1.35;
 }
-.benefit-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
+.benefit-card p {
+  color: var(--gray);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin: 0;
+}
 
 /* FEATURED PRODUCTS */
 .featured-products { background: var(--white); }
@@ -383,11 +468,13 @@
 .fp-img {
   position: relative;
   overflow: hidden;
-  height: 220px;
+  aspect-ratio: 1 / 1;
 }
 .fp-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
   transition: transform 0.5s ease;
 }
 .fp-card:hover .fp-img img { transform: scale(1.08); }
@@ -404,8 +491,8 @@
 .fp-card:hover .fp-overlay { opacity: 1; }
 .fp-tag {
   position: absolute;
-  top: 0.75rem; left: 0.75rem;
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  top: 0.75rem; right: 0.75rem;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
   color: white;
   font-size: 0.72rem;
   font-weight: 700;
@@ -414,7 +501,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-.fp-tag.new { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+.fp-tag.new { background: linear-gradient(135deg, var(--red), var(--red-dark)); }
 .fp-body { padding: 1.25rem; }
 .fp-body h3 {
   font-family: 'Playfair Display', serif;
@@ -435,6 +522,44 @@
 }
 .fp-link { color: var(--red); font-size: 0.85rem; font-weight: 600; transition: var(--transition); }
 .fp-link:hover { color: var(--gold-dark); }
+
+/* AD VIDEO */
+.ad-video-section {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+.ad-video {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+}
+.ad-mute-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: background 0.25s ease, transform 0.2s ease;
+  z-index: 10;
+}
+.ad-mute-btn:hover {
+  background: rgba(218, 36, 44, 0.8);
+  transform: scale(1.1);
+}
 
 /* WHY US */
 .why-us { background: var(--off-white); }
@@ -542,20 +667,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 2.5rem;
 }
 .client-logo-item {
-  width: 140px; height: 90px;
+  width: 160px;
+  height: 110px;
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
   transition: var(--transition);
-  filter: grayscale(60%);
+  filter: grayscale(45%);
 }
-.client-logo-item:hover { filter: grayscale(0%); transform: scale(1.05); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-.client-logo-item img { width: 100%; height: 100%; object-fit: cover; }
+.client-logo-item:hover {
+  filter: grayscale(0%);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 18px 45px rgba(200,16,46,0.14);
+  border-color: rgba(245,166,35,0.45);
+}
+.client-logo-item img {
+  max-width: 100%;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+.client-logo-item:hover img { transform: scale(1.06); }
 
 /* CTA BANNER */
 .cta-banner {
@@ -604,7 +749,7 @@
 /* STATS / BENEFITS / PRODUCTS / WHY-US / TESTIMONIALS / CLIENTS / CTA RESPONSIVE */
 @media (max-width: 1024px) {
   .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: repeat(3, 1fr); }
   .why-us-inner { grid-template-columns: 1fr; gap: 3rem; }
   .why-us-image img { height: 380px; }
   .why-us-badge { right: 1rem; }
@@ -614,7 +759,7 @@
   .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
   .products-grid { grid-template-columns: 1fr 1fr; }
-  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
   .products-grid { grid-template-columns: 1fr; }

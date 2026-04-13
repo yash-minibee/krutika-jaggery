@@ -1,4 +1,4 @@
-/* ===== PRELOADER ===== */
+﻿/* ===== PRELOADER ===== */
 #preloader {
   position: fixed;
   inset: 0;
@@ -6,8 +6,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #1a0a0a 0%, #3a0c0e 35%, #221F1F 65%, #0d0d0d 100%);
+  overflow: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Animated bg layer */
+#preloader::before {
+  content: '';
+  position: absolute;
+  inset: -10%;
+  background:
+    url('../images/Preloader/sugercane-bg.png') center center / cover no-repeat;
+  animation: pl-bg-kenburns 4s ease-in-out forwards;
+  z-index: 0;
+}
+
+/* Green-yellow colour overlay */
+#preloader::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(10,50,5,0.72) 0%,
+    rgba(30,80,10,0.65) 40%,
+    rgba(100,80,0,0.68) 70%,
+    rgba(50,40,0,0.78) 100%
+  );
+  z-index: 1;
+}
+
+@keyframes pl-bg-kenburns {
+  0%   { transform: scale(1)    translateX(0)    translateY(0); }
+  50%  { transform: scale(1.08) translateX(-2%)  translateY(-1%); }
+  100% { transform: scale(1.12) translateX(-3%)  translateY(-2%); }
 }
 
 #preloader.pl-hide {
@@ -29,6 +61,8 @@ body.loading {
   padding: 2rem 1.5rem;
   width: 100%;
   max-width: 640px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Logo */
@@ -77,13 +111,14 @@ body.loading {
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(254, 204, 3, 0.3);
+  color: rgba(218, 36, 44, 0.5);
   transition: color 0.4s ease;
   white-space: nowrap;
+  font-weight: 700;
 }
 
 .pl-step.active span {
-  color: rgba(254, 204, 3, 1);
+  color: rgba(218, 36, 44, 1);
 }
 
 /* Icon wrapper */
@@ -91,7 +126,7 @@ body.loading {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: rgba(218, 36, 44, 0.08);
+  background: linear-gradient(135deg, #1a0a0a 0%, #3a0c0e 60%, #221F1F 100%);
   border: 2px solid rgba(218, 36, 44, 0.25);
   display: flex;
   align-items: center;
@@ -111,7 +146,7 @@ body.loading {
 
 /* Active state */
 .pl-step.active .pl-icon-wrap {
-  background: rgba(218, 36, 44, 0.15);
+  background: linear-gradient(135deg, #3a0c0e 0%, #DA242C 60%, #8B0000 100%);
   border-color: rgba(254, 204, 3, 0.8);
   box-shadow:
     0 0 14px rgba(254, 204, 3, 0.5),
@@ -190,8 +225,9 @@ body.loading {
 .pl-percent {
   font-size: 0.78rem;
   letter-spacing: 0.12em;
-  color: rgba(254, 204, 3, 0.55);
+  color: rgba(218, 36, 44, 0.9);
   font-variant-numeric: tabular-nums;
+  font-weight: 700;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -202,4 +238,43 @@ body.loading {
   .pl-tagline   { font-size: 0.78rem; letter-spacing: 0.12em; }
   .pl-step span { font-size: 0.6rem; }
   .pl-connector { min-width: 12px; }
+}
+
+/* ── Final jaggery circle ── */
+.pl-icon-wrap--final {
+  overflow: hidden;
+  padding: 8px;
+}
+
+.pl-icon--final {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(1);
+  opacity: 0.25;
+  transform: scale(1);
+  transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+}
+
+.pl-step.active .pl-icon--final {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+
+  60%  { opacity: 1; transform: scale(1.5)  translate(0, 0); border-radius: 10%; }
+  100% { opacity: 1; transform: scale(3)    translate(0, 0); border-radius: 0; }
+}
+
+/* Zoom-to-fullscreen overlay */
+.pl-zoom-overlay {
+  position: fixed;
+  border-radius: 50%;
+  background: url('../images/Preloader/krutika-jaggery.png') center center / cover no-repeat;
+  z-index: 100000;
+  pointer-events: none;
+  will-change: transform, border-radius;
+  transition: transform 0.75s cubic-bezier(0.4,0,0.2,1),
+              border-radius 0.75s cubic-bezier(0.4,0,0.2,1);
 }

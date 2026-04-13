@@ -213,7 +213,7 @@ ul { list-style: none; }
 .footer {
   background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
   color: var(--white);
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 0 .7rem;
   position: relative;
   overflow: hidden;
 }
@@ -227,11 +227,13 @@ ul { list-style: none; }
 .footer-grid {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 3rem;
 }
-.footer-brand img { height: 56px; margin-bottom: 1rem; }
+.footer-brand .footer-krutika-logo,
+.footer-brand > img { height: 56px; margin-bottom: 1rem; }
 .footer-brand p {
   color: rgba(255,255,255,0.65);
   font-size: 0.9rem;
@@ -288,20 +290,30 @@ ul { list-style: none; }
 .footer-contact-item p {
   color: rgba(255,255,255,0.65);
   font-size: 0.85rem;
+  line-height: 1.6;
+}
+.footer-contact-item p a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-contact-item p a:hover {
+  color: var(--gold);
+}
   line-height: 1.5;
 }
 .footer-bottom {
-  max-width: 1200px;
-  margin: 3rem auto 0;
-  padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem 0;
+  text-align: center;
+  width: 100%;
 }
-.footer-bottom p { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+.footer-bottom p {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
 .footer-bottom span { color: var(--gold); }
 
 /* ============================================
@@ -727,5 +739,88 @@ ul { list-style: none; }
 .af-4 { top: 70%; right: 5%;  font-size: 3.2rem;  animation-duration: 9s;   animation-delay: 2s;   }
 .af-5 { top: 42%; left:  1%;  font-size: 2.2rem;  animation-duration: 7.5s; animation-delay: 1.8s; }
 .af-6 { top: 80%; right: 2%;  font-size: 2.5rem;  animation-duration: 6s;   animation-delay: 3s;   }
+
+/* Sugarcane image floating element */
+.af-sc-img {
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none;
+}
 .section-floats > .container,
 .about-section-floats > .container { position: relative; z-index: 1; }
+
+/* ===== STORY CAPTION (shared: about + home hero) ===== */
+.caption-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.15rem;
+  line-height: 1.3;
+}
+.caption-title {
+  font-size: 0.82rem;
+  color: rgba(254, 204, 3, 0.9);
+  margin: 0 0 0.55rem;
+  letter-spacing: 0.04em;
+}
+.caption-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+.caption-tags span {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  background: rgba(218, 36, 44, 0.35);
+  border: 1px solid rgba(218, 36, 44, 0.5);
+  border-radius: 20px;
+  padding: 0.18rem 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+/* ===== FOOTER FSSAI BADGE ===== */
+.footer-logos-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-krutika-logo {
+  height: 56px;
+  width: auto;
+}
+
+.footer-fssai-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px 5px;
+  gap: 3px;
+  min-width: 90px;
+}
+
+.footer-fssai-img {
+  height: 59px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+p.footer-fssai-license {
+  font-size: 0.7rem;
+  color: #000 !important;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
