@@ -765,3 +765,12 @@
   .products-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* Pushtaini logo image replacing h1 text in hero slides */
+.pushtaini-logo {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+}
