@@ -31,7 +31,7 @@
 }
 
 /* ---- Reset & Base ---- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; text-transform: capitalize }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: 'Inter', sans-serif;
@@ -82,6 +82,164 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
 }
+
+ /* ================================================ */
+
+
+.brand-text {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  
+  /* Gradient text effect */
+  /* background: linear-gradient(90deg, var(--red), #f5630f, #025306); */
+  background:linear-gradient(135deg, var(--red), var(--red-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Animation */
+  animation: shimmer 3s ease-in-out infinite;
+  letter-spacing: 0.3px;
+  position: relative;
+  
+  /* Smooth transition */
+  transition: var(--transition);
+}
+
+.brand-text:hover {
+  filter: brightness(1.1);
+  letter-spacing: 0.5px;
+}
+
+/* Gujarati text */
+.brand-text .gujarati {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* Hindi text */
+.brand-text .hindi {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Separator line */
+.brand-separator {
+  color:linear-gradient(135deg, var(--red), var(--red-dark));
+  font-weight: 500;
+  margin: 0 0.1rem;
+  -webkit-text-fill-color: unset;
+  
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+
+/* Pulse animation for separator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Decorative underline on hover */
+.brand-text::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 25%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--red-dark));
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.brand-text:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .brand-text {
+    display: none;
+  }
+
+  .brand-text .gujarati {
+    font-size: 1rem;
+  }
+
+  .brand-text .hindi {
+    font-size: 1.0rem;
+  }
+
+  .brand-text::after {
+    display: none;
+  }
+
+  .navbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+
+  .hamburger {
+    order: 2;
+  }
+
+  .nav-links {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-text {
+    font-size: 0.85rem;
+  }
+
+  .brand-separator {
+    margin: 0 0.05rem;
+  }
+
+  .brand-text .gujarati {
+    font-size: 0.95rem;
+  }
+
+  .brand-text .hindi {
+    font-size: 0.75rem;
+  }
+}
+ /* ================================================== */
 .navbar.scrolled {
   height: 60px;
   box-shadow: 0 4px 30px rgba(0,0,0,0.12);
@@ -752,36 +910,7 @@ ul { list-style: none; }
 .section-floats > .container,
 .about-section-floats > .container { position: relative; z-index: 1; }
 
-/* ===== STORY CAPTION (shared: about + home hero) ===== */
-.caption-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 0.15rem;
-  line-height: 1.3;
-}
-.caption-title {
-  font-size: 0.82rem;
-  color: rgba(254, 204, 3, 0.9);
-  margin: 0 0 0.55rem;
-  letter-spacing: 0.04em;
-}
-.caption-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  justify-content: center;
-}
-.caption-tags span {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.7);
-  background: rgba(218, 36, 44, 0.35);
-  border: 1px solid rgba(218, 36, 44, 0.5);
-  border-radius: 20px;
-  padding: 0.18rem 0.6rem;
-  letter-spacing: 0.03em;
-}
+
 
 /* ===== FOOTER FSSAI BADGE ===== */
 .footer-logos-row {

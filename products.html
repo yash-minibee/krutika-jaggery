@@ -1,14 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products – Krutika Natural Jaggery</title>
-   
+
   <link rel="preload" as="video" href="images/preloader/preloader-final.mp4" type="video/mp4" fetchpriority="high">
   <link rel="preload" as="image" href="images/preloader/preloader-final-img-2.png" fetchpriority="high">
-  
-  
+
+
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
@@ -19,9 +20,10 @@
   <link rel="stylesheet" href="css/products.css" />
   <link rel="stylesheet" href="css/products-detail.css" />
 </head>
+
 <body>
-<!-- PRELOADER -->
-<!-- <div id="preloader">
+  <!-- PRELOADER -->
+  <!-- <div id="preloader">
   <video id="preloader-video" src="images/preloader/preloader-final.mp4" poster="images/preloader/preloader-final-img-2.png" muted playsinline preload="auto" aria-hidden="true"></video>  
   <div class="preloader-content">
     <img src="images/logo-w-bg.png" alt="Krutika" class="preloader-logo" />
@@ -34,210 +36,229 @@
     </div>
   </div>
 </div> -->
-<div id="scroll-progress"></div>
-<a href="https://wa.me/919898595620" class="whatsapp-float" target="_blank">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<nav class="navbar" id="navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="images/logo-2.png" alt="Krutika Logo" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products.html" class="active">Products</a></li>
-      <li><a href="clients.html">Clients</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </div>
-</nav>
-<div class="mobile-nav" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="products.html">Products</a>
-  <a href="clients.html">Clients</a>
-  <a href="contact.html">Contact Us</a>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero products-hero">
-  <div class="ph-particles" id="ph-particles-PAGE"></div>
-  <div class="ph-floats">
-    <span class="phf phf-1"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
-    <span class="phf phf-2">🍬</span>
-    <span class="phf phf-3">🌿</span>
-    <span class="phf phf-4">🍯</span>
-    <span class="phf phf-5">✨</span>
-    <span class="phf phf-6">🌱</span>
-    <span class="phf phf-7">⭐</span>
-    <span class="phf phf-8"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
-  </div>
-  <div class="ph-wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/></svg></div>
-  <div class="page-hero-content">
-    <div class="section-tag white" style="margin:0 auto 1rem;">Our Range</div>
-    <h1>Our <span>Products</span></h1>
-    <p>Premium natural jaggery in every form — crafted for purity, packed with goodness.</p>
-    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Products</span></nav>
-  </div>
-</section>
-
-<!-- PRODUCTS DETAIL SECTION -->
-<section class="pd-section">
-
-  <!-- Product 1: Natural Jaggery — image LEFT -->
-  <div class="pd-row" id="prod-jaggery">
-    <div class="pd-img-col">
-      <div class="pd-gallery">
-        <div class="pd-main-img-wrap">
-          <img src="images/Products/jaggery.jpeg" alt="Natural Jaggery" class="pd-main-img" id="main-img-1" />
-          <span class="pd-badge">100% Natural</span>
-        </div>
-        <div class="pd-thumbs">
-          <img src="images/Products/jaggery.jpeg" alt="" class="pd-thumb active" data-target="main-img-1" />
-          <img src="images/Preloader/krutika-jaggery.png" alt="" class="pd-thumb" data-target="main-img-1" />
-          <img src="images/Preloader/jaggery-block-c.png" alt="" class="pd-thumb" data-target="main-img-1" />
-        </div>
-      </div>
+  <div id="scroll-progress"></div>
+  <a href="https://wa.me/919898595620" class="whatsapp-float" target="_blank">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-2.png" alt="Krutika Logo" />
+      </a>
+      <p class="brand-text">
+        <span class="gujarati">દેશી ગોળ</span>
+        <span class="brand-separator">│</span>
+        <span class="hindi">देशी गुड़</span>
+      </p>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
-    <div class="pd-info-col">
-      <div class="pd-info-sticky">
-        <p class="pd-tag">Krutika Natural Jaggery</p>
-        <h2 class="pd-name">Natural Jaggery</h2>
-        <p class="pd-tagline">Pure. Traditional. Chemical-Free.</p>
-        <div class="pd-divider"></div>
-        <p class="pd-desc">Handcrafted from the finest sugarcane, our natural jaggery retains all essential minerals and nutrients. No chemicals, no additives — just pure golden goodness in every bite.</p>
-        <div class="pd-features">
-          <span>✓ No Chemicals</span>
-          <span>✓ Farm Direct</span>
-          <span>✓ FSSAI Certified</span>
-        </div>
-        <div class="pd-packing-label">Select Packing</div>
-        <div class="pd-packing">
-          <button class="pd-pack-btn active">900g</button>
-        </div>
-        <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
-      </div>
-    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="clients.html">Clients</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 
-  <!-- Product 2: Jaggery Powder — image RIGHT -->
-  <div class="pd-row" id="prod-powder">
-    <div class="pd-img-col">
-      <div class="pd-gallery">
-        <div class="pd-main-img-wrap">
-          <img src="images/Products/jaggery-powder.png" alt="Jaggery Powder" class="pd-main-img" id="main-img-2" />
-          <span class="pd-badge pd-badge--green">Premium Grade</span>
-        </div>
-        <div class="pd-thumbs">
-          <img src="images/Products/jaggery-powder.png" alt="" class="pd-thumb active" data-target="main-img-2" />
-          <img src="images/Products/jaggery-powder-sachet.jpg" alt="" class="pd-thumb" data-target="main-img-2" />
-        </div>
-      </div>
+  <!-- PAGE HERO -->
+  <section class="page-hero products-hero">
+    <div class="ph-particles" id="ph-particles-PAGE"></div>
+    <div class="ph-floats">
+      <span class="phf phf-1"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
+      <span class="phf phf-2">🍬</span>
+      <span class="phf phf-3">🌿</span>
+      <span class="phf phf-4">🍯</span>
+      <span class="phf phf-5">✨</span>
+      <span class="phf phf-6">🌱</span>
+      <span class="phf phf-7">⭐</span>
+      <span class="phf phf-8"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
     </div>
-    <div class="pd-info-col">
-      <div class="pd-info-sticky">
-        <p class="pd-tag">Krutika Natural Jaggery</p>
-        <h2 class="pd-name">Jaggery Powder</h2>
-        <p class="pd-tagline">Fine-ground. Easy to use. Pure.</p>
-        <div class="pd-divider"></div>
-        <p class="pd-desc">Our jaggery powder is finely ground for easy dissolving in beverages, baking, and cooking. Same purity as our blocks — now in a convenient powder form.</p>
-        <div class="pd-features">
-          <span>✓ Easy to Dissolve</span>
-          <span>✓ Baking Ready</span>
-          <span>✓ No Additives</span>
-        </div>
-        <div class="pd-packing-label">Select Packing</div>
-        <div class="pd-packing">
-          <button class="pd-pack-btn active">500 g (Pouch)</button>
-          <button class="pd-pack-btn">1 kg(Pouch)</button>
-          <button class="pd-pack-btn">1 kg (Jar)</button>
-        </div>
-        <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
-      </div>
+    <div class="ph-wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+      </svg></div>
+    <div class="page-hero-content">
+      <div class="section-tag white" style="margin:0 auto 1rem;">Our Range</div>
+      <h1>Our <span>Products</span></h1>
+      <p>Premium natural jaggery in every form — crafted for purity, packed with goodness.</p>
+      <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Products</span></nav>
     </div>
-  </div>
+  </section>
 
-  <!-- Product 3: Aam Papad — image LEFT -->
-  <div class="pd-row" id="prod-aampapad">
-    <div class="pd-img-col">
-      <div class="pd-gallery">
-        <div class="pd-main-img-wrap">
-          <img src="images/Products/aam-papad.png" alt="Aam Papad" class="pd-main-img" id="main-img-3" />
-          <span class="pd-badge pd-badge--gold">Traditional</span>
+  <!-- PRODUCTS DETAIL SECTION -->
+  <section class="pd-section">
+
+    <!-- Product 1: Natural Jaggery — image LEFT -->
+    <div class="pd-row" id="prod-jaggery">
+      <div class="pd-img-col">
+        <div class="pd-gallery">
+          <div class="pd-main-img-wrap">
+            <img src="images/Products/jaggery.jpeg" alt="Natural Jaggery" class="pd-main-img" id="main-img-1" />
+            <span class="pd-badge">100% Natural</span>
+          </div>
+          <div class="pd-thumbs">
+            <img src="images/Products/jaggery.jpeg" alt="" class="pd-thumb active" data-target="main-img-1" />
+            <img src="images/Preloader/krutika-jaggery.png" alt="" class="pd-thumb" data-target="main-img-1" />
+            <img src="images/Products/jaggery2.jpeg" alt="" class="pd-thumb" data-target="main-img-1" />
+          </div>
         </div>
-        <div class="pd-thumbs">
-          <img src="images/Products/aam-papad.png" alt="" class="pd-thumb active" data-target="main-img-3" />
+      </div>
+      <div class="pd-info-col">
+        <div class="pd-info-sticky">
+          <p class="pd-tag">Krutika Natural Jaggery</p>
+          <h2 class="pd-name">Natural Jaggery</h2>
+          <p class="pd-tagline">Pure. Traditional. Chemical-Free.</p>
+          <div class="pd-divider"></div>
+          <p class="pd-desc">Handcrafted from the finest sugarcane, our natural jaggery retains all essential minerals
+            and nutrients. No chemicals, no additives — just pure golden goodness in every bite.</p>
+          <div class="pd-features">
+            <span>✓ No Chemicals</span>
+            <span>✓ Natural Sweetener</span>
+            <span>✓ FSSAI Certified</span>
+          </div>
+          <div class="pd-packing-label">Select Packing</div>
+          <div class="pd-packing">
+            <button class="pd-pack-btn ">900g</button>
+          </div>
+          <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
         </div>
       </div>
     </div>
-    <div class="pd-info-col">
-      <div class="pd-info-sticky">
-        <p class="pd-tag">Krutika Natural Jaggery</p>
-        <h2 class="pd-name">Aam Papad</h2>
-        <p class="pd-tagline">Naturally sweet. Traditionally made.</p>
-        <div class="pd-divider"></div>
-        <p class="pd-desc">Made from real mangoes and natural jaggery, our Aam Papad is a nostalgic treat with no artificial flavours or preservatives. Pure mango goodness in every strip.</p>
-        <div class="pd-features">
-          <span>✓ Real Mango</span>
-          <span>✓ No Preservatives</span>
-          <span>✓ Natural Sweetener</span>
-        </div>
-        <div class="pd-packing-label">Select Packing</div>
-        <div class="pd-packing">
-          <button class="pd-pack-btn active">200g</button>
-          <button class="pd-pack-btn">500g</button>
-          <button class="pd-pack-btn">1 kg</button>
-        </div>
-        <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Product 4: Jaggery Powder Sachet — image RIGHT -->
-  <div class="pd-row" id="prod-sachet">
-    <div class="pd-img-col">
-      <div class="pd-gallery">
-        <div class="pd-main-img-wrap">
-          <img src="images/Products/jaggery-powder-sachet.jpg" alt="Jaggery Powder Sachet" class="pd-main-img" id="main-img-4" />
-          <span class="pd-badge">Convenient</span>
-        </div>
-        <div class="pd-thumbs">
-          <img src="images/Products/jaggery-powder-sachet.jpg" alt="" class="pd-thumb active" data-target="main-img-4" />
-          <img src="images/Products/jaggery-powder.png" alt="" class="pd-thumb" data-target="main-img-4" />
+    <!-- Product 2: Jaggery Powder — image RIGHT -->
+    <div class="pd-row" id="prod-powder">
+      <div class="pd-img-col">
+        <div class="pd-gallery">
+          <div class="pd-main-img-wrap">
+            <img src="images/Products/jaggery-powder.png" alt="Jaggery Powder" class="pd-main-img" id="main-img-2" />
+            <span class="pd-badge pd-badge--green">Premium Grade</span>
+          </div>
+          <div class="pd-thumbs">
+            <img src="images/Products/jaggery-powder.png" alt="" class="pd-thumb active" data-target="main-img-2" />
+            <img src="images/Products/jaggery-powder2.jpeg" alt="" class="pd-thumb" data-target="main-img-2" />
+            <img src="images/Products/jaggery-powder-jar.png" alt="" class="pd-thumb" data-target="main-img-2" />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="pd-info-col">
-      <div class="pd-info-sticky">
-        <p class="pd-tag">Krutika Natural Jaggery</p>
-        <h2 class="pd-name">Jaggery Powder Sachet</h2>
-        <p class="pd-tagline">On-the-go purity. Single serve.</p>
-        <div class="pd-divider"></div>
-        <p class="pd-desc">Perfect for cafes, hotels, and on-the-go use. Each sachet contains pure jaggery powder — a healthy, natural alternative to sugar in your daily cup.</p>
-        <div class="pd-features">
-          <span>✓ Single Serve</span>
-          <span>✓ Cafe Ready</span>
-          <span>✓ Zero Sugar</span>
+      <div class="pd-info-col">
+        <div class="pd-info-sticky">
+          <p class="pd-tag">Krutika Natural Jaggery</p>
+          <h2 class="pd-name">Jaggery Powder</h2>
+          <p class="pd-tagline">Fine-ground. Easy to use. Pure.</p>
+          <div class="pd-divider"></div>
+          <p class="pd-desc">Our jaggery powder is finely ground for easy dissolving in beverages, baking, and cooking.
+            Same purity as our blocks — now in a convenient powder form.</p>
+          <div class="pd-features">
+            <span>✓ Easy to Dissolve</span>
+            <span>✓ Baking Ready</span>
+            <span>✓ No Additives</span>
+          </div>
+          <div class="pd-packing-label">Select Packing</div>
+          <div class="pd-packing">
+            <button class="pd-pack-btn ">500g & 1kg (Pouch)</button>
+
+            <button class="pd-pack-btn">1 kg (Jar)</button>
+          </div>
+          <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
         </div>
-        <div class="pd-packing-label">Select Packing</div>
-        <div class="pd-packing">
-          <button class="pd-pack-btn active">100 PCS X 20 PKT ( 5g Sachet )</button>
-        </div>
-        <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
       </div>
     </div>
-  </div>
 
-</section>
+    <!-- Product 3: Aam Papad — image LEFT -->
+    <div class="pd-row" id="prod-aampapad">
+      <div class="pd-img-col">
+        <div class="pd-gallery">
+          <div class="pd-main-img-wrap">
+            <img src="images/Products/aam-papad.jpeg" alt="Aam Papad" class="pd-main-img" id="main-img-3" />
+            <span class="pd-badge pd-badge--gold">Traditional</span>
+          </div>
+          <div class="pd-thumbs">
+            <img src="images/Products/aam-papad.jpeg" alt="" class="pd-thumb active" data-target="main-img-3" />
+            <img src="images/Products/aam-papad1.jpeg" alt="" class="pd-thumb " data-target="main-img-3" />
+            <img src="images/Products/amm-papad-bites.jpeg" alt="" class="pd-thumb " data-target="main-img-3" />
+            <img src="images/Products/aam-papad2.jpeg" alt="" class="pd-thumb" data-target="main-img-3" />
+          </div>
+        </div>
+      </div>
+      <div class="pd-info-col">
+        <div class="pd-info-sticky">
+          <p class="pd-tag">Krutika Natural Jaggery</p>
+          <h2 class="pd-name">Aam Papad</h2>
+          <p class="pd-tagline">Naturally sweet. Traditionally made.</p>
+          <div class="pd-divider"></div>
+          <p class="pd-desc">Made from real mangoes and natural jaggery, our Aam Papad is a nostalgic treat with no
+            artificial flavours or preservatives. Pure mango goodness in every bites.</p>
+          <div class="pd-features">
+            <span>✓ Real Mango</span>
+            <span>✓ No Preservatives</span>
+            <span>✓ Natural Sweetener</span>
+          </div>
+          <div class="pd-packing-label">Select Packing</div>
+          <div class="pd-packing">
+            <button class="pd-pack-btn ">100g (Rolls)</button>
+            <button class="pd-pack-btn">200g (Bites)</button>
+            <button class="pd-pack-btn">10 inch x 10 inch (Sheet)</button>
+          </div>
+          <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4: Jaggery Powder Sachet — image RIGHT -->
+    <div class="pd-row" id="prod-sachet">
+      <div class="pd-img-col">
+        <div class="pd-gallery">
+          <div class="pd-main-img-wrap">
+            <img src="images/Products/jaggery-powder-sachet.jpg" alt="Jaggery Powder Sachet" class="pd-main-img"
+              id="main-img-4" />
+            <span class="pd-badge">Convenient</span>
+          </div>
+          <div class="pd-thumbs">
+            <img src="images/Products/jaggery-powder-sachet.jpg" alt="" class="pd-thumb " data-target="main-img-4" />
+            <img src="images/Products/jaggery-powder-sachet2.jpeg" alt="" class="pd-thumb" data-target="main-img-4" />
+          </div>
+        </div>
+      </div>
+      <div class="pd-info-col">
+        <div class="pd-info-sticky">
+          <p class="pd-tag">Krutika Natural Jaggery</p>
+          <h2 class="pd-name">Jaggery Powder Sachet</h2>
+          <p class="pd-tagline">On-the-go purity. Single serve.</p>
+          <div class="pd-divider"></div>
+          <p class="pd-desc">Perfect for cafes, hotels, and on-the-go use. Each sachet contains pure jaggery powder — a
+            healthy, natural alternative to sugar in your daily cup.</p>
+          <div class="pd-features">
+            <span>✓ Single Serve</span>
+            <span>✓ Cafe Ready</span>
+            <span>✓ Zero Sugar</span>
+          </div>
+          <div class="pd-packing-label">Select Packing</div>
+          <div class="pd-packing">
+            <button class="pd-pack-btn">100 PCS X 20 PKT ( 5g Sachet )</button>
+          </div>
+          <a href="contact.html#contact-form" class="pd-cta">Contact →</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-                <div class="footer-logos-row">
+        <div class="footer-logos-row">
           <img src="images/logo-2.png" alt="Krutika Logo" class="footer-krutika-logo" />
           <div class="footer-fssai-badge">
             <img src="images/FSSAI_Logo.png" alt="FSSAI Certified" class="footer-fssai-img" />
@@ -247,8 +268,8 @@
         <p>Krutika Natural Jaggery Products brings you the finest quality jaggery, crafted with tradition and delivered
           with care. Pure, natural, and trusted since 2005.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/krutikaagro/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24"
-              fill="currentColor">
+          <a href="https://www.facebook.com/krutikaagro/" target="_blank" rel="noopener" title="Facebook"
+            aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg></a>
           <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24"
@@ -262,13 +283,17 @@
               <path
                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg></a>
-          <a href="https://www.youtube.com/@krutikanaturaljaggery936" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24"
-              fill="currentColor">
+          <a href="https://www.youtube.com/@krutikanaturaljaggery936" target="_blank" rel="noopener" title="YouTube"
+            aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
               <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a1a1a" />
             </svg></a>
-          <a href="https://wa.me/919898595620" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="https://wa.me/919898595620" target="_blank" rel="noopener" title="WhatsApp"
+            aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -295,7 +320,9 @@
         <h4>Contact Us</h4>
         <div class="footer-contact-item">
           <div class="icon">📍</div>
-          <p><a href="https://maps.google.com/?q=Metoda+GIDC+Kalawad+Road+Rajkot+Gujarat" target="_blank" rel="noopener">Plot No. G-1052, Kishan Gate, Gate No. 3, Metoda G.I.D.C., Kalawad Road, Rajkot - 360021</a></p>
+          <p><a href="https://maps.google.com/?q=Metoda+GIDC+Kalawad+Road+Rajkot+Gujarat" target="_blank"
+              rel="noopener">Plot No. G-1052, Kishan Gate, Gate No. 3, Metoda G.I.D.C., Kalawad Road, Rajkot -
+              360021</a></p>
         </div>
         <div class="footer-contact-item">
           <div class="icon">📞</div>
@@ -308,63 +335,79 @@
       </div>
     </div>
     <div class="footer-bottom" style="text-align: center;margin-top: 1rem;">
-    <p>© 2026 <span>Krutika Natural Jaggery Products</span>. All rights reserved. | Made with ❤️ in India</p>
-    <p></p>
-  </div>
-</footer>
-<script src="js/preloader.js"></script>
-<script src="js/script.js"></script>
-<script>
-// Thumbnail gallery switcher
-document.querySelectorAll('.pd-thumb').forEach(function(thumb) {
-  thumb.addEventListener('click', function() {
-    var targetId = this.dataset.target;
-    var mainImg  = document.getElementById(targetId);
-    var siblings = this.closest('.pd-thumbs').querySelectorAll('.pd-thumb');
+      <p>© 2026 <span>Krutika Natural Jaggery Products</span>. All rights reserved. | Made with ❤️ in India</p>
+      <p></p>
+    </div>
+  </footer>
+  <script src="js/preloader.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Thumbnail gallery switcher
+    document.querySelectorAll('.pd-thumb').forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        var targetId = this.dataset.target;
+        var mainImg = document.getElementById(targetId);
+        var siblings = this.closest('.pd-thumbs').querySelectorAll('.pd-thumb');
 
-    // Fade out
-    mainImg.classList.add('pd-img-fade');
-    setTimeout(function() {
-      mainImg.src = thumb.src;
-      mainImg.classList.remove('pd-img-fade');
-    }, 200);
+        // Fade out
+        mainImg.classList.add('pd-img-fade');
+        setTimeout(function () {
+          mainImg.src = thumb.src;
+          mainImg.classList.remove('pd-img-fade');
+        }, 200);
 
-    // Active thumb
-    siblings.forEach(function(t){ t.classList.remove('active'); });
-    this.classList.add('active');
-  });
-});
-
-// Packing button toggle
-document.querySelectorAll('.pd-packing').forEach(function(group) {
-  group.querySelectorAll('.pd-pack-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      group.querySelectorAll('.pd-pack-btn').forEach(function(b){ b.classList.remove('active'); });
-      this.classList.add('active');
+        // Active thumb
+        siblings.forEach(function (t) { t.classList.remove('active'); });
+        this.classList.add('active');
+      });
     });
-  });
-});
-</script>
+
+    // Packing button toggle
+    document.querySelectorAll('.pd-packing').forEach(function (group) {
+      group.querySelectorAll('.pd-pack-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          group.querySelectorAll('.pd-pack-btn').forEach(function (b) { b.classList.remove('active'); });
+          this.classList.add('active');
+        });
+      });
+    });
+
+    document.querySelectorAll('.pd-packing').forEach(function (group) {
+      group.querySelectorAll('.pd-pack-btn').forEach(function (btn, index) {
+        btn.addEventListener('click', function () {
+          // Find parent product row
+          var productRow = this.closest('.pd-row');
+          if (productRow) {
+            var thumbsContainer = productRow.querySelector('.pd-thumbs');
+            var mainImgWrap = productRow.querySelector('.pd-main-img-wrap');
+
+            if (thumbsContainer && mainImgWrap) {
+              // Get the thumbnail at the same index as the button
+              var targetThumb = thumbsContainer.querySelectorAll('.pd-thumb')[index + 1];
+              var mainImg = mainImgWrap.querySelector('.pd-main-img');
+
+              if (targetThumb && mainImg) {
+                // Fade out
+                mainImg.classList.add('pd-img-fade');
+                setTimeout(function () {
+                  mainImg.src = targetThumb.src;
+                  mainImg.alt = targetThumb.alt;
+                  mainImg.classList.remove('pd-img-fade');
+                }, 200);
+
+                // Update active thumbnail
+                thumbsContainer.querySelectorAll('.pd-thumb').forEach(function (t) {
+                  t.classList.remove('active');
+                });
+                targetThumb.classList.add('active');
+              }
+            }
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

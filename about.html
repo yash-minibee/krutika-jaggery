@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us – Krutika Natural Jaggery</title>
-   
+
   <link rel="preload" as="video" href="images/preloader/preloader-final.mp4" type="video/mp4" fetchpriority="high">
   <link rel="preload" as="image" href="images/preloader/preloader-final-img-2.png" fetchpriority="high">
-  
+
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
@@ -17,9 +18,10 @@
   <link rel="stylesheet" href="css/preloader.css" />
   <link rel="stylesheet" href="css/about.css" />
 </head>
+
 <body>
-<!-- PRELOADER -->
-<!-- <div id="preloader">
+  <!-- PRELOADER -->
+  <!-- <div id="preloader">
   <video id="preloader-video" src="images/preloader/preloader-final.mp4" poster="images/preloader/preloader-final-img-2.png" muted playsinline preload="auto" aria-hidden="true"></video>
   <div class="preloader-content">
     <img src="images/logo-w-bg.png" alt="Krutika" class="preloader-logo" />
@@ -32,226 +34,249 @@
     </div>
   </div>
 </div> -->
-<div id="scroll-progress"></div>
-<a href="https://wa.me/919898595620" class="whatsapp-float" target="_blank">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<nav class="navbar" id="navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="images/logo-2.png" alt="Krutika Logo" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="clients.html">Clients</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  <div id="scroll-progress"></div>
+  <a href="https://wa.me/919898595620" class="whatsapp-float" target="_blank">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-2.png" alt="Krutika Logo" />
+      </a>
+      <p class="brand-text">
+        <span class="gujarati">દેશી ગોળ</span>
+        <span class="brand-separator">│</span>
+        <span class="hindi">देशी गुड़</span>
+      </p>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="clients.html">Clients</a>
+    <a href="contact.html">Contact Us</a>
   </div>
-</nav>
-<div class="mobile-nav" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="products.html">Products</a>
-  <a href="clients.html">Clients</a>
-  <a href="contact.html">Contact Us</a>
-</div>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="ph-particles" id="ph-particles-PAGE"></div>
-  <!-- Floating theme elements -->
-  <div class="ph-floats">
-    <span class="phf phf-1">🌿</span>
-    <span class="phf phf-2">🍬</span>
-    <span class="phf phf-3"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
-    <span class="phf phf-4">✨</span>
-    <span class="phf phf-5">🌱</span>
-    <span class="phf phf-6">🍯</span>
-    <span class="phf phf-7">🌿</span>
-    <span class="phf phf-8">⭐</span>
-  </div>
-  <div class="ph-wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/></svg></div>
-  <div class="page-hero-content">
-    <div class="section-tag white" style="margin:0 auto 1rem;">Our Story</div>
-    <h1>About Journey of <span>Krutika</span></h1>
-    <p>Since 2000 of purity, passion, and premium natural jaggery craftsmanship.</p>
-    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></nav>
-  </div>
-</section>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="ph-particles" id="ph-particles-PAGE"></div>
+    <!-- Floating theme elements -->
+    <div class="ph-floats">
+      <span class="phf phf-1">🌿</span>
+      <span class="phf phf-2">🍬</span>
+      <span class="phf phf-3"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
+      <span class="phf phf-4">✨</span>
+      <span class="phf phf-5">🌱</span>
+      <span class="phf phf-6">🍯</span>
+      <span class="phf phf-7">🌿</span>
+      <span class="phf phf-8">⭐</span>
+    </div>
+    <div class="ph-wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+      </svg></div>
+    <div class="page-hero-content">
+      <div class="section-tag white" style="margin:0 auto 1rem;">Our Story</div>
+      <h1>Journey of <span>Krutika</span></h1>
+      <p>Since 2000 Of Purity, Passion, And Premium Natural Jaggery Craftsmanship.</p>
+      <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></nav>
+    </div>
+  </section>
 
-<!-- BRAND STORY -->
-<section class="section-pad about-section-floats">
-  <div class="about-floats">
-    <span class="af af-1"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
-    <span class="af af-2">🍯</span>
-    <span class="af af-3">🌿</span>
-    <span class="af af-4">✨</span>
-    <span class="af af-5">🌱</span>
-    <span class="af af-6">🍬</span>
-  </div>
-  <div class="container">
-    <div class="about-story-grid">
-      <div class="reveal-left">
-        <div class="about-img-stack">
-          <img src="images/ai-img-stry-1.jpg" alt="Krutika Production" class="about-img-main" />
-          <div class="about-story-caption">
-            <p class="caption-name">Shri Babubhai H Mehta</p>
-            <p class="caption-title">Freedom Fighter &amp; Teacher</p>
-            <div class="caption-tags">
-              <span>#FreedomFighter</span>
-              <span>#ProudFamily</span>
-              <span>#Respect</span>
+  <!-- BRAND STORY -->
+  <section class="section-pad about-section-floats">
+    <div class="about-floats">
+      <span class="af af-1"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
+      <span class="af af-2">🍯</span>
+      <span class="af af-3">🌿</span>
+      <span class="af af-4">✨</span>
+      <span class="af af-5">🌱</span>
+      <span class="af af-6">🍬</span>
+    </div>
+    <div class="container">
+      <div class="about-story-grid">
+        <div class="reveal-left">
+          <div class="about-img-stack">
+            <img src="images/ai-img-stry-1.jpg" alt="Krutika Production" class="about-img-main" />
+            <div class="about-story-caption">
+              <p class="caption-name">Shri Babubhai H Mehta</p>
+              <p class="caption-title">Freedom Fighter &amp; Teacher</p>
+              <div class="caption-tags">
+                <span>#FreedomFighter</span>
+                <span>#ProudFamily</span>
+                <span>#Respect</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="reveal-right">
-        <div class="section-tag">Our Story</div>
-        <h2 class="section-title">From a Small Farm to <span>India's Trusted Brand</span></h2>
-        <div class="divider"></div>
-        <p style="color:var(--gray);line-height:1.8;margin-bottom:1rem;text-align: justify;">Krutika Agro Produce Pvt Ltd Has Been Ccommitted To Pure, Traditional Nutrition. Our Journey Of Almost Three Decades Continues With Commitment To Manufacturing Chemical-Free, Natural Jaggery, Jaggery Powder And Aam Papad. We Provide Authentic Natural Traditional Food In Modern Packaging.<strong style="color:var(--dark);"></strong></p>
-        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.5rem;text-align: justify;">This Business Is Dedicated To My Grandfather, A True Freedom Fighter Your Courage And Sacrifice Are The Foundation Of Everything We Build Today. We Strive To Honor Your Legacy Through Honesty, Hard Work, And Service</p>
-        <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Get in Touch →</a>
+        <div class="reveal-right">
+          <div class="section-tag">Our Story</div>
+          <h2 class="section-title">From Farm To <span>India's Trusted Brand</span></h2>
+          <div class="divider"></div>
+          <p style="color:var(--gray);line-height:1.8;margin-bottom:1rem;text-align: justify;">Krutika Agro Produce Pvt
+            Ltd Has Been Committed To Pure, Traditional Nutrition. Our Journey Of Almost Three Decades Continues With
+            Commitment To Manufacturing Chemical-Free, Natural Jaggery, Jaggery Powder And Aam Papad. We Provide
+            Authentic Natural Traditional Food In Modern Packaging.<strong style="color:var(--dark);"></strong></p>
+          <p style="color:var(--gray);line-height:1.8;margin-bottom:1.5rem;text-align: justify;">This Business Is
+            Dedicated To Our Grandfather, A True Freedom Fighter Your Courage And Sacrifice Are The Foundation Of
+            Everything We Build Today. We Strive To Honor Your Legacy Through Honesty, Hard Work, And Service</p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Get in Touch →</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MISSION & VISION -->
-<section class="mission-vision section-pad about-section-floats" style="background:var(--off-white);">
-  <div class="about-floats">
-    <span class="af af-1">🎯</span>
-    <span class="af af-2">🌟</span>
-    <span class="af af-3">💎</span>
-    <span class="af af-4">🌿</span>
-    <span class="af af-5"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
-    <span class="af af-6">✨</span>
-  </div>
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="section-tag">Our Purpose</div>
-      <h2 class="section-title">Mission &amp; <span>Vision</span></h2>
-      <div class="divider center"></div>
+  <!-- MISSION & VISION -->
+  <section class="mission-vision section-pad about-section-floats" style="background:var(--off-white);">
+    <div class="about-floats">
+      <span class="af af-1">🎯</span>
+      <span class="af af-2">🌟</span>
+      <span class="af af-3">💎</span>
+      <span class="af af-4">🌿</span>
+      <span class="af af-5"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
+      <span class="af af-6">✨</span>
     </div>
-    <div class="mv-grid">
-      <div class="mv-card reveal delay-1">
-        <div class="mv-icon">🎯</div>
-        <h3>Our Mission</h3>
-        <p>To provide families with 100% natural, chemical-free food products that bridge the gap between Healthy Traditional Food and Taste by leveraging three decades of expertise in Jaggery and a decade in fruit-based treats, we ensure every bite is as pure as nature intended.</p>
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag">Our Purpose</div>
+        <h2 class="section-title">Mission &amp; <span>Vision</span></h2>
+        <div class="divider center"></div>
       </div>
-      <div class="mv-card reveal delay-2">
-        <div class="mv-icon">🌟</div>
-        <h3>Our Vision</h3>
-        <p>To become a Global benchmark for Traditional Natural Food, where "Krutika" is equal to food that can be enjoyed by everyone—from a toddler to a grandparent—without a second thought.</p>
-      </div>
-      <div class="mv-card reveal delay-3">
-        <div class="mv-icon">💎</div>
-        <h3>Our Values</h3>
-        <p>Purity in every product. Transparency in every process. Respect for farmers, customers, and the environment that sustains us all.</p>
+      <div class="mv-grid">
+        <div class="mv-card reveal delay-1">
+          <div class="mv-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To Provide Families With 100% Natural, Chemical-free Food Products That Bridge The Gap Between Healthy
+            Traditional Food and Taste By Leveraging Three Decades Of Expertise in Jaggery And a Decade In Fruit-based
+            Treats, We Ensure Every Bite Is As Pure As Nature Intended.</p>
+        </div>
+        <div class="mv-card reveal delay-2">
+          <div class="mv-icon">🌟</div>
+          <h3>Our Vision</h3>
+          <p>To Become a Global Benchmark For Traditional Natural Food, Where "Krutika" Is Equal To Food That Can Be
+            Enjoyed By Everyone—From a Toddler To a Grandparent—without a Second Thought.</p>
+        </div>
+        <div class="mv-card reveal delay-3">
+          <div class="mv-icon">💎</div>
+          <h3>Our Values</h3>
+          <p>Purity in every product. Transparency in every Process. Respect For Farmers, Customers, And The Environment
+            That Sustains Us All.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- IMPORTERS / GLOBAL REACH -->
-<section class="importers-section section-pad">
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="section-tag gold">Global Reach</div>
-      <h2 class="section-title">Our <span>Importers</span></h2>
-      <div class="divider center"></div>
-      <p class="section-sub">Krutika Natural Jaggery is trusted by importers and distributors across the world.</p>
+  <!-- IMPORTERS / GLOBAL REACH -->
+  <section class="importers-section section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag gold">Global Reach</div>
+        <h2 class="section-title">Our <span>Importers</span></h2>
+        <div class="divider center"></div>
+        <p class="section-sub">Krutika Natural Jaggery is trusted by importers and distributors across the world.</p>
+      </div>
+      <div class="importers-map-wrap reveal">
+        <img src="images/map.jpg" alt="World Map" class="importers-map-img" />
+        <div class="imp-dot" data-country="USA" style="top:42.2%;left:23.5%"></div>
+        <div class="imp-dot" data-country="Canada" style="top:30.8%;left:21.75%"></div>
+        <div class="imp-dot" data-country="South Africa" style="top:71.1%;left:53.1%"></div>
+        <div class="imp-dot" data-country="UAE" style="top:46.45%;left:60.3%"></div>
+        <div class="imp-dot" data-country="India" style="top:47.75%;left:66.1%"></div>
+        <div class="imp-dot" data-country="Australia" style="top:69%;left:79.75%"></div>
+        <div class="imp-dot" data-country="New Zealand" style="top:75%;left:89.5%"></div>
+      </div>
     </div>
-    <div class="importers-map-wrap reveal">
-      <img src="images/map.jpg" alt="World Map" class="importers-map-img" />
-      <div class="imp-dot" data-country="USA"          style="top:42.2%;left:23.5%"></div>
-      <div class="imp-dot" data-country="Canada"       style="top:30.8%;left:21.75%"></div>
-      <div class="imp-dot" data-country="South Africa" style="top:71.1%;left:53.1%"></div>
-      <div class="imp-dot" data-country="UAE"          style="top:46.45%;left:60.3%"></div>
-      <div class="imp-dot" data-country="India"        style="top:47.75%;left:66.1%"></div>
-      <div class="imp-dot" data-country="Australia"    style="top:69%;left:79.75%"></div>
-      <div class="imp-dot" data-country="New Zealand"  style="top:75%;left:89.5%"></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- PRODUCTION PROCESS -->
-<section class="process section-pad about-section-floats">
-  <div class="about-floats">
-    <span class="af af-1"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
-    <span class="af af-2">⚙️</span>
-    <span class="af af-3">🔥</span>
-    <span class="af af-4">🍯</span>
-    <span class="af af-5">🧪</span>
-    <span class="af af-6">📦</span>
-  </div>
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="section-tag gold">How We Make It</div>
-      <h2 class="section-title">Our <span>Production Process</span></h2>
-      <div class="divider center"></div>
-      <p class="section-sub">Every batch of Krutika jaggery goes through a meticulous 6-step process to ensure maximum purity and quality.</p>
+  <!-- PRODUCTION PROCESS -->
+  <section class="process section-pad about-section-floats">
+    <div class="about-floats">
+      <span class="af af-1"><img src="images/sugercane-emoji.png" alt="sugarcane" class="af-sc-img" /></span>
+      <span class="af af-2">⚙️</span>
+      <span class="af af-3">🔥</span>
+      <span class="af af-4">🍯</span>
+      <span class="af af-5">🧪</span>
+      <span class="af af-6">📦</span>
     </div>
-    <div class="process-timeline">
-      <div class="process-step reveal delay-1">
-        <div class="process-num">01</div>
-        <div class="process-content">
-          <div class="process-icon"><img src="images/sugercane-emoji.png" alt="Sugarcane" class="af-sc-img" style="width:4rem;height:4  rem;" /></div>
-          <h4>Sugarcane Harvesting</h4>
-          <p>Fresh sugarcane is hand-selected from certified organic farms at peak ripeness.</p>
-        </div>
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag gold">How We Make It</div>
+        <h2 class="section-title">Our <span>Production Process</span></h2>
+        <div class="divider center"></div>
+        <p class="section-sub">Every batch of Krutika jaggery goes through a meticulous 6-step process to ensure maximum
+          purity and quality.</p>
       </div>
-      <div class="process-step reveal delay-2">
-        <div class="process-num">02</div>
-        <div class="process-content">
-          <div class="process-icon">🚿</div>
-          <h4>Washing &amp; Cleaning</h4>
-          <p>Harvested cane is thoroughly washed and cleaned to remove dirt and impurities before processing.</p>
+      <div class="process-timeline">
+        <div class="process-step reveal delay-1">
+          <div class="process-num">01</div>
+          <div class="process-content">
+            <div class="process-icon"><img src="images/sugercane-emoji.png" alt="Sugarcane" class="af-sc-img"
+                style="width:4rem;height:4  rem;" /></div>
+            <h4>Sugarcane Harvesting</h4>
+            <p>Fresh sugarcane is hand-selected from certified organic farms at peak ripeness.</p>
+          </div>
         </div>
-      </div>
-      <div class="process-step reveal delay-3">
-        <div class="process-num">03</div>
-        <div class="process-content">
-          <div class="process-icon">⚙️</div>
-          <h4>Juice Extraction</h4>
-          <p>Cane is crushed within hours of harvest to extract the freshest, most nutrient-rich juice.</p>
+        <div class="process-step reveal delay-2">
+          <div class="process-num">02</div>
+          <div class="process-content">
+            <div class="process-icon">🚿</div>
+            <h4>Washing &amp; Cleaning</h4>
+            <p>Harvested cane is thoroughly washed and cleaned to remove dirt and impurities before processing.</p>
+          </div>
         </div>
-      </div>
-      <div class="process-step reveal delay-4">
-        <div class="process-num">04</div>
-        <div class="process-content">
-          <div class="process-icon">🔬</div>
-          <h4>Filtration</h4>
-          <p>Extracted juice is carefully filtered using natural methods to remove fibre and impurities — no chemicals.</p>
+        <div class="process-step reveal delay-3">
+          <div class="process-num">03</div>
+          <div class="process-content">
+            <div class="process-icon">⚙️</div>
+            <h4>Juice Extraction</h4>
+            <p>Cane is crushed within hours of harvest to extract the freshest, most nutrient-rich juice.</p>
+          </div>
         </div>
-      </div>
-      <div class="process-step reveal delay-5">
-        <div class="process-num">05</div>
-        <div class="process-content">
-          <div class="process-icon">🔥</div>
-          <h4>Slow Cooking</h4>
-          <p>Slow-boiled in traditional iron pans to preserve minerals and develop rich, natural flavour.</p>
+        <div class="process-step reveal delay-4">
+          <div class="process-num">04</div>
+          <div class="process-content">
+            <div class="process-icon">🔬</div>
+            <h4>Filtration</h4>
+            <p>Extracted juice is carefully filtered using natural methods to remove fibre and impurities — no
+              chemicals.</p>
+          </div>
         </div>
-      </div>
-      <div class="process-step reveal delay-1">
-        <div class="process-num">06</div>
-        <div class="process-content">
-          <div class="process-icon">❄️</div>
-          <h4>Cooling Down</h4>
-          <p>The cooked jaggery is poured into moulds and allowed to cool naturally, setting into its final pure form.</p>
+        <div class="process-step reveal delay-5">
+          <div class="process-num">05</div>
+          <div class="process-content">
+            <div class="process-icon">🔥</div>
+            <h4>Slow Cooking</h4>
+            <p>Slow-boiled in traditional iron pans to preserve minerals and develop rich, natural flavour.</p>
+          </div>
         </div>
-      </div>
+        <div class="process-step reveal delay-1">
+          <div class="process-num">06</div>
+          <div class="process-content">
+            <div class="process-icon">❄️</div>
+            <h4>Cooling Down</h4>
+            <p>The cooked jaggery is poured into moulds and allowed to cool naturally, setting into its final pure form.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    </div>
+    </div>
+  </section>
 
-<!-- CERTIFICATIONS -->
-<!-- <section class="certifications section-pad about-section-floats" style="background:linear-gradient(135deg,var(--red-dark),var(--red));">
+  <!-- CERTIFICATIONS -->
+  <!-- <section class="certifications section-pad about-section-floats" style="background:linear-gradient(135deg,var(--red-dark),var(--red));">
   <div class="about-floats">
     <span class="af af-1">🏛️</span>
     <span class="af af-2">🌿</span>
@@ -291,11 +316,11 @@
   </div>
 </section> -->
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-                <div class="footer-logos-row">
+        <div class="footer-logos-row">
           <img src="images/logo-2.png" alt="Krutika Logo" class="footer-krutika-logo" />
           <div class="footer-fssai-badge">
             <img src="images/FSSAI_Logo.png" alt="FSSAI Certified" class="footer-fssai-img" />
@@ -305,8 +330,8 @@
         <p>Krutika Natural Jaggery Products brings you the finest quality jaggery, crafted with tradition and delivered
           with care. Pure, natural, and trusted since 2005.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/krutikaagro/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24"
-              fill="currentColor">
+          <a href="https://www.facebook.com/krutikaagro/" target="_blank" rel="noopener" title="Facebook"
+            aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg></a>
           <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24"
@@ -320,13 +345,17 @@
               <path
                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg></a>
-          <a href="https://www.youtube.com/@krutikanaturaljaggery936" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24"
-              fill="currentColor">
+          <a href="https://www.youtube.com/@krutikanaturaljaggery936" target="_blank" rel="noopener" title="YouTube"
+            aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
               <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a1a1a" />
             </svg></a>
-          <a href="https://wa.me/919898595620" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="https://wa.me/919898595620" target="_blank" rel="noopener" title="WhatsApp"
+            aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -353,7 +382,9 @@
         <h4>Contact Us</h4>
         <div class="footer-contact-item">
           <div class="icon">📍</div>
-          <p><a href="https://maps.google.com/?q=Metoda+GIDC+Kalawad+Road+Rajkot+Gujarat" target="_blank" rel="noopener">Plot No. G-1052, Kishan Gate, Gate No. 3, Metoda G.I.D.C., Kalawad Road, Rajkot - 360021</a></p>
+          <p><a href="https://maps.google.com/?q=Metoda+GIDC+Kalawad+Road+Rajkot+Gujarat" target="_blank"
+              rel="noopener">Plot No. G-1052, Kishan Gate, Gate No. 3, Metoda G.I.D.C., Kalawad Road, Rajkot -
+              360021</a></p>
         </div>
         <div class="footer-contact-item">
           <div class="icon">📞</div>
@@ -366,25 +397,12 @@
       </div>
     </div>
     <div class="footer-bottom" style="text-align: center;margin-top: 1rem;">
-    <p>© 2026 <span>Krutika Natural Jaggery Products</span>. All rights reserved. | Made with ❤️ in India</p>
-    <p></p>
-  </div>
-</footer>
-<script src="js/preloader.js"></script>
-<script src="js/script.js"></script>
+      <p>© 2026 <span>Krutika Natural Jaggery Products</span>. All rights reserved. | Made with ❤️ in India</p>
+      <p></p>
+    </div>
+  </footer>
+  <script src="js/preloader.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
